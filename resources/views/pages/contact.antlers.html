@@ -1,0 +1,9 @@
+{{#
+	@name Contact
+	@desc The contact page template loading in the pagebuilder blocks
+#}}
+<main id="page-content" class="page-contact">
+    {{ page_builder scope="block" }}
+        {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+</main>

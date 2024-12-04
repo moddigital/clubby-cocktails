@@ -1,0 +1,50 @@
+{{#
+	@name Left navigation
+	@desc The sites left navigation rendered on each page.
+#}}
+
+<div class="navigation__container hide-mob">
+    <div>
+        <ul id="primary-menu" class="navigation__list navigation__list--left" >
+            {{ nav:left  include_home="false"  }}
+                {{# Tailwind dropdown gets enabled when the item has children #}}
+                <li class="navigation__item  {{ if is_current }} navigation__item--current {{ /if }}"
+                    {{if children}}
+                        x-data="{ isOpen: false, timeout: null,  close(focusAfter) { if (! this.isOpen) return; this.isOpen = false; focusAfter && focusAfter.focus()} }"
+                        x-on:mouseenter="if (!isMobile()){timeout = setTimeout(() => { isOpen = true }, 50)}"
+                        x-on:mouseleave="if (!isMobile()){isOpen = false; clearTimeout(timeout)}"
+                        x-on:keydown.escape.prevent.stop="isOpen = false"
+                        x-on:focusin.window="! $refs.panel.contains($event.target) && close();"
+                    {{ /if }}
+                >
+
+                    <a class="navigation__link" href="{{ url }}"
+                        {{ if external }} target="_blank" {{ /if }}
+                        {{if children}}
+                            :class="isOpen ? 'hovered' : ''"
+                        {{/if}}
+                    >
+                        {{ title }}
+                        {{ if children }} {{svg src="down" class="navigation__item__icon"}} {{ /if }}
+                    </a><!-- . navigation__link -->
+
+                    {{ if children }}
+                        <div class="navigation__dd"
+                            x-show="isOpen"
+                            x-ref="panel"
+                            x-transition.opacity
+                            x-transition.duration.150ms
+                            x-transition.origin.top
+                            x-cloak
+                        >
+                            <ul class="navigation__dd__list">
+                                {{ *recursive children* }}
+                            </ul>
+                        </div><!-- .navigation__dd -->
+                    {{ /if }}
+
+                 </li><!-- .navigation__item -->
+            {{ /nav:left }}
+        </ul><!-- .navigation__list -->
+    </div>
+</div><!-- .navigation__container -->

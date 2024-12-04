@@ -1,0 +1,38 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name_newsletter
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Name
+              icon: text
+              instructions: Name
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email_newsletter
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: E-mail
+              icon: text
+              instructions: E-mail
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required

@@ -1,0 +1,204 @@
+@use '../abstracts/_abstracts-dir'as *;
+
+
+// Font root size
+html {
+    font-size: var(--font-root-size);
+
+    @include vw(){
+        font-size: 0.9665vw;
+    }
+
+    @include fixed() {
+        font-size: 8px;
+    }
+
+    @include mobile() {
+        font-size: 16px;
+    }
+}
+
+// Body
+body {
+    font-size: var(--font-body);
+    color: var(--font-body-c);
+    font-weight: 400;
+    @include mobile(){
+        font-size: var(--font-body-m);
+    }
+}
+
+// Paragraph lineheight and margin only for the second block
+p {
+    margin: 0;
+    line-height: 1.125;
+
+    +p {
+        margin-top: 1.375rem; // Default paragraph spacing
+    }
+}
+
+// Big
+p.big {
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 0.875;
+    font-size: 5rem;
+    text-transform: uppercase;
+    @include mobile {
+        font-size: 2.4rem;
+    }
+
+    em {
+        font-style: normal;
+        font-size: 2.5rem;
+        color: $gold;
+        display: block;
+        line-height: 1.1;
+        @include mobile {
+            font-size: 1.25rem;
+        }
+        span {
+            text-transform: none;
+            font-weight: normal;
+        }
+    }
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--font-head-c);
+}
+
+h1 {
+    font-size: var(--font-h1);
+    @include mobile {
+        font-size: var(--font-h1-m);
+    }
+}
+
+h2 {
+    font-size: var(--font-h2);
+    @include mobile {
+        font-size: var(--font-h2-m);
+    }
+}
+
+h3 {
+    font-size: var(--font-h3);
+    line-height: 1.277;
+    margin-bottom: 1.75rem;
+    color: #233448;
+    text-transform: uppercase;
+
+    @include mobile {
+        font-size: var(--font-h3-m);
+    }
+}
+
+h4 {
+    font-size: var(--font-h4);
+    @include mobile {
+        font-size: var(--font-h4-m);
+    }
+}
+
+h5 {
+    font-size: var(--font-h5);
+    @include mobile {
+        font-size: var(--font-h5-m);
+    }
+}
+
+h6 {
+    font-size: var(--font-h6);
+    @include mobile {
+        font-size: var(--font-h6-m);
+    }
+}
+
+// Link styles
+a {
+    color: var(--font-link-c);
+    text-decoration: none;
+    transition: color $default-timing ease-in-out;
+    &:hover {
+        color: var(--font-link-hc);
+        text-decoration: var(--font-underline-h);
+    }
+}
+
+
+
+
+// Font weight helpers
+.font-thin {
+    font-weight: 100;
+}
+
+.font-extralight {
+    font-weight: 200;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+// Decoration and styles helpers
+.italic {
+    font-style: italic;
+}
+
+.not-italic {
+    font-style: normal;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration-line: overline;
+}
+
+.line-through {
+    text-decoration-line: line-through;
+}
+
+.no-underline {
+    text-decoration-line: none;
+}

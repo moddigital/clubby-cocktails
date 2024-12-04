@@ -1,0 +1,6 @@
+super: true
+name: 'Dhirendra Chaturvedi'
+id: a953c747-bca6-44f0-9aed-74936e725f8c
+password_hash: $2y$10$dAa/DKbfjiMOTBq8h96pGev1OJzZeyTSXKtsbMxqPm7t6r2WWFo6q
+preferences:
+  locale: en

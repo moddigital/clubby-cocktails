@@ -1,0 +1,71 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              display: Name
+              type: text
+              validate:
+                - required
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              input_type: text
+              antlers: false
+              instructions: Name
+              placeholder: Naam
+              visibility: visible
+              always_save: false
+              hide_display: false
+          -
+            handle: email
+            field:
+              display: E-mail
+              type: text
+              validate:
+                - required
+                - email
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              input_type: text
+              antlers: false
+              instructions: E-mail
+              placeholder: E-mail
+              visibility: visible
+              always_save: false
+              hide_display: false
+          -
+            handle: message
+            field:
+              display: Message
+              type: textarea
+              validate:
+                - required
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              antlers: false
+              instructions: Message
+              visibility: visible
+              always_save: false
+              hide_display: false
+          -
+            handle: consent
+            field:
+              inline_label: 'I agree that my data will be stored and transmitted. For more information, please refer to our privacy policy.'
+              default: false
+              display: Consent
+              type: toggle
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              validate:
+                - accepted
+              localizable: false
+              visibility: visible
+              hide_display: false

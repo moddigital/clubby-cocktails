@@ -1,0 +1,47 @@
+// @import fonts here, do the styling in /base/_typography.scss
+// Local Askja
+@font-face {
+    font-family: 'Askja';
+    src: url('/public/fonts/Askja-Regular.woff2') format('woff2'),
+        url('/public/fonts/Askja-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Askja
+.f-askja {
+  font-family: 'Askja';
+  font-weight: normal;
+}
+
+// PT book
+.f-book {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// PT-medium
+.f-medium {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Condensed medium
+.f-condensed {
+  font-family: "futura-pt-condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Condensed Bold
+.f-condensed b,
+.f-condensed strong,
+b.f-condensed,
+strong.f-condensed {
+  font-family: "futura-pt-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

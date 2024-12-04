@@ -1,0 +1,6 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+.block {
+    padding-top: $default-padding-top;
+    padding-bottom: $default-padding-bottom;
+}

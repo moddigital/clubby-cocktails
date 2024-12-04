@@ -1,0 +1,44 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+.block__scroll-down {
+    position: relative;
+
+    &--underline {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: $gold;
+            height: 0.375rem;
+            width: 15rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+
+            @include mobile {
+                bottom: -0.5rem;
+                width: 10rem;
+                height: 0.175rem;
+            }
+        }
+    }
+
+    .content {
+        h2,
+        h3 {
+            font-size: 3.75rem;
+            line-height: 1.166;
+            margin-bottom: 1rem;
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+    }
+    .icon {
+        width: 100%;
+        max-width: 2.75rem;
+        height: auto;
+        margin: 0 auto;
+    }
+}

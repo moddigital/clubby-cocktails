@@ -1,0 +1,10 @@
+title: Contact
+honeypot: fax
+email:
+  -
+    id: HeavIHA7
+    to: sales@clubbycocktails.com
+    reply_to: '{{ email }}'
+    subject: 'Received form through website.'
+    html: email/form_owner
+    text: email/form_owner_text

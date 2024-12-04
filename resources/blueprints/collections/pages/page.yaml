@@ -1,0 +1,81 @@
+title: Page
+tabs:
+  main:
+    display: Globaal
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              input_type: text
+              localizable: true
+              listable: true
+              display: Titel
+              validate:
+                - required
+              instructions_position: above
+              antlers: false
+          -
+            import: page_builder
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: meta
+            field:
+              type: section
+              instructions: 'De metagegevens van dit item.'
+              display: Meta
+              instructions_position: above
+              listable: hidden
+              localizable: false
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              generate: true
+              listable: hidden
+              display: Slug
+              validate:
+                - required
+                - 'unique_entry_value:{collection},{id},{site}'
+              instructions_position: above
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+              instructions_position: above
+              mode: default
+              create: true
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Template
+              icon: template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+              folder: pages

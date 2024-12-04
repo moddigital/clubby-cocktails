@@ -1,0 +1,132 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+// Image only slider
+.splide {
+    &--img {
+        .splide__slide, picture {
+            display: flex;
+        }
+        .splide__media, picture {
+            object-fit: cover;
+        }
+    }
+}
+
+// Banner slider
+.block__banner {
+    max-width: 100%;
+    .splide__slide {
+        flex-shrink: unset;
+        position: relative;
+        width: 100%;
+
+    }
+    .splide__overlay {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .splide__content {
+        * { margin: 0; }
+
+        margin-left: 60vw;
+        margin-top: -4rem;
+
+        @include mobile {
+            margin-top: -1rem;
+        }
+
+        h1 {
+            font-size: 9.875rem;
+            line-height: 0.7875;
+            color: #fff;
+            font-family: "futura-pt-condensed", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+
+            @include mobile {
+                font-size: 2.475rem;
+            }
+
+            strong {
+                font-weight: 500;
+                color: $gold;
+                font-size:  18.875rem;
+
+                @include mobile {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+    .splide__image,
+    .splide__media {
+        height: 100%;
+        object-fit: cover;
+    }
+    // Initialized
+    &.splide {
+        .splide__slide {
+            flex-shrink: 0;
+        }
+    }
+}
+
+
+
+/*COCKTAILS CAROUSEL*/
+
+@media only screen and (min-width:761px) {
+    .cocktails-mob{
+        display:none;
+    }
+
+}
+
+
+@media only screen and (max-width:760px) {
+    .cocktails-desk{
+        display:none;
+    }
+
+}
+
+.cocktails-mob .splide__pagination{
+    position: relative;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.cocktails-mob .splide__pagination__page.is-active{
+    background:#cda87b;
+}
+
+.cocktails-mob .splide__arrow svg{
+    height:1em;
+    width:1em;
+}
+
+.cocktails-mob .splide__arrow{
+    background: #cda87b;
+    opacity:1;
+    height:1.75em;
+    width:1.75em;
+}
+
+.cocktails-mob .splide__arrow svg{
+    fill:#233448;
+}
+
+.cocktails-mob .splide__arrow--next{
+    right:0em;
+}
+
+.cocktails-mob .splide__arrow--prev{
+    left:0em;
+}
+

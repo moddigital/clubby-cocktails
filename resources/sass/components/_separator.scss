@@ -1,0 +1,21 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+.block__separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        display: block;
+        width: 23.625rem;
+        height: auto;
+        @include mobile {
+            width: 16rem;
+        }
+    }
+}
+
+
+.block--full-width + .block--separator.block {
+    padding-top: 0;
+}

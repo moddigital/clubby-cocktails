@@ -1,0 +1,45 @@
+{{#
+	@name Footer
+	@desc The sites footer rendered on each page.
+#}}
+
+<footer id="page-footer">
+    <div class="prefooter">
+        <p>CLUBBY COCKTAILS</p>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="c12-xs c3-sm c3-md">
+                    <div class="inner">
+                        {{ configuration.footer_content_left }}
+                            {{ partial src="components/{type}" }}
+                        {{ /configuration.footer_content_left }}
+                    </div>
+                </div>
+                <!-- 3/12 -->
+
+                <div class="c12-xs c6-sm c6-md">
+                    <div class="inner">
+                        <img class="img footer__logo" alt="{{configuration.footer_logo:alt}}" src="{{ configuration.footer_logo ? configuration.footer_logo : "\assets\logos\logo-big.png" }}">
+                        {{ partial:navigation/footer }}
+                    </div>
+
+                </div>
+                <!-- 6/12 -->
+
+                <div class="c12-xs  c3-sm c3-md">
+                    <div class="inner">
+                        {{ configuration.footer_content_right }}
+                            {{ partial src="components/{type}" }}
+                        {{ /configuration.footer_content_right }}
+                    </div>
+                </div>
+                <!-- 3/12 -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

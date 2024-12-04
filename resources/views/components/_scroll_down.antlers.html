@@ -1,0 +1,18 @@
+<div class="block__scroll-down {{ if scroll_to_id == ""}}block__scroll-down--underline{{ /if }}">
+    {{ if scroll_to_id }}
+        <a href="#{{ scroll_to_id }}" class="no-link">
+    {{ /if }}
+        <div class="inner">
+            <div class="content">
+                {{ content }}
+            </div>
+            {{ if scroll_to_id }}
+                <div class="icon">
+                    {{ svg src="arrow-down" }}
+                </div>
+            {{ /if }}
+        </div>
+    {{ if scroll_to_id }}
+        </a>
+    {{ /if }}
+</div>

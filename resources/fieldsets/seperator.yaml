@@ -1,0 +1,15 @@
+title: Separator
+fields:
+  -
+    handle: scroll_to_id
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Scroll to ID'
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

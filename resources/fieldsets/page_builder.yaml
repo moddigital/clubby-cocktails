@@ -1,0 +1,1164 @@
+title: Paginabouwer
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      collapse: true
+      listable: false
+      display: Paginabouwer
+      instructions: 'Bouw uw pagina op met behulp van verschillende vooraf gedefinieerde secties.'
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            one_column_block:
+              display: 'Eenkoloms blok'
+              instructions: null
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: article
+                -
+                  handle: collapse_layout
+                  field:
+                    fields:
+                      -
+                        handle: offset_first_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                            - 9
+                            - 10
+                            - 11
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen kolom'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_first_column
+                        field:
+                          options:
+                            1: 1/12
+                            2: 2/12
+                            3: 3/12
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                            11: 11/12
+                            12: 12/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '12'
+                          type: select
+                          display: 'Breedte kolom'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                    type: collapse
+                    display: 'Layout aanpassingen'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+            two_column_block:
+              display: 'Tweekoloms blok'
+              instructions: null
+              icon: layout-two-columns
+              fields:
+                -
+                  handle: section_first_column
+                  field:
+                    type: section
+                    display: 'Eerste kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: article
+                -
+                  handle: section_second_column
+                  field:
+                    type: section
+                    display: 'Tweede kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: second_article
+                -
+                  handle: collapse_layout
+                  field:
+                    fields:
+                      -
+                        handle: offset_first_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                            - 9
+                            - 10
+                            - 11
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen eerste kolom'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_first_column
+                        field:
+                          options:
+                            2: 2/12
+                            3: 3/12
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '6'
+                          type: select
+                          display: 'Breedte eerste kolom'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: offset_second_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                            - 9
+                            - 10
+                            - 11
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen tweede kolom'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_second_column
+                        field:
+                          options:
+                            2: 2/12
+                            3: 3/12
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '6'
+                          type: select
+                          display: 'Breedte tweede kolom'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: v_align_1
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Eerste kolom'
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_2
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Tweede kolom'
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                    type: collapse
+                    display: 'Layout aanpassingen'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+                  config:
+                    fields:
+                      -
+                        handle: settings_bg_color
+                        field:
+                          allow_any: true
+                          type: color
+                          display: Achtergrondkleur
+                          icon: color
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                          swatches:
+                            - '#8cb63c'
+                            - '#ffff'
+                          localizable: false
+                      -
+                        handle: achtergrond_gradient
+                        field:
+                          options:
+                            'null': Geen
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          type: select
+                          display: 'Achtergrond Gradient'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          default: 'null'
+                          localizable: false
+                      -
+                        handle: settings_padding_top
+                        field:
+                          type: integer
+                          display: 'Aangepaste padding bovenkant'
+                          icon: integer
+                          instructions: 'In pixels'
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          localizable: false
+                      -
+                        handle: settings_padding_bottom
+                        field:
+                          type: integer
+                          display: 'Aangepaste padding onderkant'
+                          icon: integer
+                          instructions: 'In pixels'
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          localizable: false
+                      -
+                        handle: settings_padding_top_m
+                        field:
+                          type: integer
+                          display: 'Padding bovenkant mobiel'
+                          icon: integer
+                          instructions: 'In pixels'
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          localizable: false
+                      -
+                        handle: settings_padding_bottom_m
+                        field:
+                          type: integer
+                          display: 'Padding onderkant mobiel'
+                          icon: integer
+                          instructions: 'In pixels'
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          localizable: false
+                      -
+                        handle: custom_class
+                        field:
+                          input_type: text
+                          antlers: false
+                          type: text
+                          display: 'Custom class'
+                          icon: text
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          localizable: false
+                      -
+                        handle: style_selector
+                        field: style_selector.style_selector
+                        config:
+                          width: 50
+                      -
+                        handle: custom_id
+                        field:
+                          input_type: text
+                          antlers: false
+                          type: text
+                          display: 'Custom ID'
+                          icon: text
+                          localizable: false
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: is_no_wrap
+                        field:
+                          inline_label: 'No wrap'
+                          default: false
+                          type: toggle
+                          display: 'No text wrap?'
+                          icon: toggle
+                          localizable: false
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+            three_column_block:
+              display: 'Driekoloms blok'
+              instructions: null
+              icon: layout-three-columns
+              fields:
+                -
+                  handle: section_first_column
+                  field:
+                    type: section
+                    display: 'Eerste kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: article
+                -
+                  handle: section_second_column
+                  field:
+                    type: section
+                    display: 'Tweede kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: second_article
+                -
+                  handle: section_tird_column
+                  field:
+                    type: section
+                    display: 'Derde kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: third_article
+                -
+                  handle: collapse_layout
+                  field:
+                    fields:
+                      -
+                        handle: offset_all_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen gehele blok'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_all_column
+                        field:
+                          options:
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                            11: 11/12
+                            12: 12/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '12'
+                          type: select
+                          display: 'Breedte gehele blok'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_1
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Eerste kolom'
+                          width: 33
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_2
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Tweede kolom'
+                          width: 33
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_3
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Derde kolom'
+                          width: 33
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                    type: collapse
+                    display: 'Layout aanpassingen'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+            four_column_block:
+              display: 'Vierkoloms blok'
+              instructions: null
+              icon: layout-three-columns
+              fields:
+                -
+                  handle: section_first_column
+                  field:
+                    type: section
+                    display: 'Eerste kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: article
+                -
+                  handle: section_second_column
+                  field:
+                    type: section
+                    display: 'Tweede kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: second_article
+                -
+                  handle: section_tird_column
+                  field:
+                    type: section
+                    display: 'Derde kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: third_article
+                -
+                  handle: section_fourth_column
+                  field:
+                    type: section
+                    display: 'Vierde kolom'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  import: fourth_article
+                -
+                  handle: collapse_layout
+                  field:
+                    fields:
+                      -
+                        handle: offset_all_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen gehele blok'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_all_column
+                        field:
+                          options:
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                            11: 11/12
+                            12: 12/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '12'
+                          type: select
+                          display: 'Breedte gehele blok'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_1
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Eerste kolom'
+                          width: 25
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_2
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Tweede kolom'
+                          width: 25
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_3
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Derde kolom'
+                          width: 25
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                      -
+                        handle: v_align_4
+                        field:
+                          options:
+                            align-top: Bovenkant
+                            align-mid: Midden
+                            align-bot: Onderkant
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: align-top
+                          type: select
+                          display: 'Verticale uitlijning'
+                          icon: select
+                          instructions: 'Vierde kolom'
+                          width: 25
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                    type: collapse
+                    display: 'Layout aanpassingen'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+            full_width_block:
+              display: 'Volledige breedte blok'
+              instructions: null
+              icon: arrows-fit-to-width
+              fields:
+                -
+                  import: mw_article
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+            image_gallery_block:
+              display: 'Afbeeldingen gallerij blok'
+              instructions: null
+              icon: dashboard-layout-2
+              fields:
+                -
+                  import: gallery
+                -
+                  handle: collapse_layout
+                  field:
+                    fields:
+                      -
+                        handle: offset_all_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                            - 9
+                            - 10
+                            - 11
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen gehele blok'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_all_column
+                        field:
+                          options:
+                            1: 1/12
+                            2: 2/12
+                            3: 3/12
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                            11: 11/12
+                            12: 12/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '12'
+                          type: select
+                          display: 'Breedte gehele blok'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                    type: collapse
+                    display: 'Layout aanpassingen'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+            thumbnail_block:
+              display: Thumbnails
+              instructions: null
+              icon: layout-grid-dots
+              fields:
+                -
+                  handle: thumbnail_grid
+                  field:
+                    fields:
+                      -
+                        import: thumbnail
+                    mode: stacked
+                    add_row: 'Thumbnail toevoegen'
+                    reorderable: true
+                    fullscreen: true
+                    type: grid
+                    display: Thumbnails
+                    icon: grid
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_layout
+                  field:
+                    fields:
+                      -
+                        handle: offset_all_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                            - 9
+                            - 10
+                            - 11
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen gehele blok'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_all_column
+                        field:
+                          options:
+                            1: 1/12
+                            2: 2/12
+                            3: 3/12
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                            11: 11/12
+                            12: 12/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '12'
+                          type: select
+                          display: 'Breedte gehele blok'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                    type: collapse
+                    display: 'Layout aanpassingen'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+            collection_index_block:
+              display: 'Collectie overzicht'
+              instructions: null
+              icon: hierarchy-vertical-nav-flow
+              fields:
+                -
+                  handle: mounted_collection
+                  field:
+                    max_items: 1
+                    mode: select
+                    type: collections
+                    display: 'Uitgelezen collectie'
+                    icon: collections
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_layout
+                  field:
+                    fields:
+                      -
+                        handle: offset_all_column
+                        field:
+                          options:
+                            - 0
+                            - 1
+                            - 2
+                            - 3
+                            - 4
+                            - 5
+                            - 6
+                            - 7
+                            - 8
+                            - 9
+                            - 10
+                            - 11
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          max_items: 1
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '0'
+                          type: select
+                          display: 'Inspringen gehele blok'
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                          width: 50
+                      -
+                        handle: width_all_column
+                        field:
+                          options:
+                            1: 1/12
+                            2: 2/12
+                            3: 3/12
+                            4: 4/12
+                            5: 5/12
+                            6: 6/12
+                            7: 7/12
+                            8: 8/12
+                            9: 9/12
+                            10: 10/12
+                            11: 11/12
+                            12: 12/12
+                          taggable: false
+                          push_tags: false
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          cast_booleans: false
+                          default: '12'
+                          type: select
+                          display: 'Breedte gehele blok'
+                          icon: select
+                          width: 50
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          hide_display: false
+                    type: collapse
+                    display: 'Layout aanpassingen'
+                    icon: section
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    localizable: false
+                -
+                  handle: collapse_settings
+                  field: uiterlijk.collapse_settings
+            separator_block:
+              display: Separator
+              instructions: null
+              icon: layout-page-break
+              fields:
+                -
+                  import: seperator
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true
+      fullscreen: true
+      hide_display: false

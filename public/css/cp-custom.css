@@ -1,0 +1,31 @@
+/* whitelabel font*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* whitelabel for login screen*/
+body.outside.rad-theme {
+    overflow: hidden;
+}
+.outside.rad-theme {
+    background: rgb(229,0,126);
+    background: linear-gradient(135deg, rgba(218,0,120,1) 0%, rgba(40,30,103,1) 95%)
+}
+.outside.rad-theme .btn-dropdown-primary, .outside.rad-theme .btn-primary {
+    background: rgb(229,0,126)!important;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(248, 198, 202, 0.3) !important;
+}
+.outside.rad-theme .btn-dropdown-primary:hover, .outside.rad-theme .btn-primary:hover {
+    background: rgb(229,0,126)!important;
+    filter: brightness(85%);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(248, 198, 202, 0.3) !important;
+}
+
+/* whitelabel for CMS */
+#statamic .white-label-logo {
+    width: 100%;
+    display: none;
+}

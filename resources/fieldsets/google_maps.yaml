@@ -1,0 +1,42 @@
+title: 'Google maps'
+fields:
+  -
+    handle: embed_iframe
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Maps embed code'
+      icon: text
+      instructions: 'Plak hier de Google maps embed code, deze is te vinden onder het knopje delen > insluiten op de google maps website.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      replicator_preview: false
+  -
+    handle: px_height
+    field:
+      default: '480'
+      type: integer
+      display: 'Hoogte desktop'
+      icon: integer
+      instructions: 'Hoogte van de maps in pixels'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: px_height_mob
+    field:
+      type: integer
+      display: 'Hoogte mobiel'
+      icon: integer
+      instructions: 'Hoogte van de maps op mobiel in pixels'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      default: '384'

@@ -1,0 +1,106 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+
+// Base button
+.btn {
+    @include button-reset;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 3px solid rgba(0, 0, 0, 1);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.5625rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+    margin: 0;
+    min-height: 2.9375rem;
+    min-width: 7.375rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+
+    background-position: 0 -45%;
+    background-repeat: repeat-x;
+    transition: background-position 1s ease, color 200ms ease 200ms;
+
+    @include mobile {
+        font-size: 1rem;
+        min-height: 2rem;
+        border: 2px solid;
+    }
+}
+
+.btn-reset {
+    @include button-reset;
+}
+
+// Style variations
+.btn--primary {
+    border-color: $btn-primary-border;
+    background-color: $btn-primary-bg;
+    color: $btn-primary-text;
+    background-image: url($gold-fill-data);
+
+    &:hover,
+    &:focus {
+        border-color: $btn-primary-border-hover;
+        //box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: $btn-primary-text-hover;
+        background-position: 70% 50%;
+    }
+}
+.btn--secondary {
+    border-color: $btn-secondary-border;
+    background-color: $btn-secondary-bg;
+    color: $btn-secondary-text;
+    background-image: url($gold-fill-data);
+    overflow: shown;
+
+
+    &:hover,
+    &:focus {
+        border-color: $btn-secondary-border-hover;
+        // box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: $btn-secondary-text-hover;
+        background-position: 70% 50%;
+    }
+}
+
+// Icon variants
+.btn--icon-left {
+    svg {
+        display: block;
+        width: 1.5rem;
+        height: auto;
+        margin-right: 1rem;
+    }
+}
+.btn--icon-right {
+    svg {
+        display: block;
+        width: 1.5rem;
+        height: auto;
+        margin-left: 1rem;
+    }
+}
+
+// Spacing
+.block__buttons {
+    line-height: 0;
+}
+.block__buttons a:not(:last-of-type) {
+    margin-right: 1rem;
+}

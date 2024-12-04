@@ -1,0 +1,24 @@
+title_separator: '|'
+site_name: 'Clubby Cocktails'
+noindex_local: true
+noindex_staging: true
+noindex_production: false
+hreflang_auto: false
+json_ld_type: organization
+organization_name: 'Clubby Cocktails'
+organization_logo: logos/clubby-cocktails-logo.png
+breadcrumbs: true
+sitemap_collections:
+  - pages
+  - cocktails
+trackers_local: true
+trackers_staging: false
+trackers_production: true
+use_google_site_verification: false
+tracker_type: gtag
+google_analytics: G-G2NXGPZT2P
+anonymize_ip: true
+use_cookie_banner: true
+cookiepagina: 85d36ca1-c0a0-4e39-a2f2-cd0e88fe06ae
+display_style: left
+debug_mode: false

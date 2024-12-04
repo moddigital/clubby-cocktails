@@ -1,0 +1,175 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+/*
+  Let the footer stay where it belongs
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Use min height because of the fixed header.
+    overflow-x: hidden;
+}
+footer {
+    margin-top: auto;
+}
+
+/* Pre footer */
+.prefooter {
+    text-align: center;
+    font-family: 'Askja';
+    font-weight: normal;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: #cda87b;
+    margin-bottom: 3.125rem;
+    margin-top: 7.25rem;
+
+    @include mobile {
+        margin-bottom: 1.5rem;
+        margin-top: 3rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Navigation */
+.footer {
+    .navigation {
+        padding-top: 2.85rem;
+
+        @include mobile {
+            padding-top: 2rem;
+        }
+    }
+    .navigation__list {
+        justify-content: center;
+
+        @include mobile {
+            padding: 0;
+            flex-direction: row;
+        }
+    }
+    .navigation__link {
+        color: #fff;
+        font-size: 1.25rem;
+        font-family: "futura-pt", sans-serif;
+        font-weight: 400;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @include mobile {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            font-size: 1rem;
+        }
+    }
+    .navigation__item {
+        &::after {
+            font-size: 1.25rem;
+            font-family: "futura-pt", sans-serif;
+            font-weight: 400;
+
+            @include mobile {
+                top: 0.4em;
+                content: "/";
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+/* Footer */
+.footer {
+    padding-bottom: 2.375rem;
+    padding-top: 4.875rem;
+    position: relative;
+    background-color: var(--footer-bg-c);
+    color: var(--footer-text-c);
+
+    @include mobile {
+        padding-top: 4.5rem;
+        padding-bottom: 1.25rem;
+    }
+
+    // Footer logo
+    &__logo {
+        margin-top: -4.875rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: var(--footer-logo-mw);
+        @include mobile {
+            margin-top: 0rem;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            top: 0;
+            max-width: var(--footer-logo-mw-mob);
+        }
+    }
+
+    // Button
+    .block__buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5rem;
+
+        @include mobile {
+            margin-top: 0.5rem;
+        }
+    }
+
+
+    // Content
+    h2,
+    h3 {
+        font-size: 1.625rem;
+        line-height: 1.15;
+        margin-bottom: 2rem;
+
+        @include mobile {
+            font-size: 1.325rem;
+            margin-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+    }
+    p {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        line-height: 1.5;
+        font-family: "futura-pt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+    // Footer links
+    a:not(.btn) {
+        transition: color $default-timing ease;
+        &:hover {
+            color: var(--footer-text-hc);
+        }
+    }
+
+    @include mobile {
+    /* Mobile order */
+    .row {
+        flex-direction: column;
+
+        div:nth-child(1) {
+            order: 3;
+        }
+        div:nth-child(2) {
+            order: 3;
+        }
+        div:nth-child(1) {
+            order: 2;
+        }
+    }
+    }
+
+
+
+}

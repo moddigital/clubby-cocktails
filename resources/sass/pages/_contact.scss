@@ -1,0 +1,25 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+.page-contact {
+    .block__banner {
+
+        .splide__content {
+            margin-left: 0;
+            margin-top: 12rem;
+
+            @include mobile {
+                margin-top: -1rem;
+            }
+
+            h1 {
+                font-size: 8.75rem;
+
+                @include mobile {
+                    font-size: 5rem;
+                }
+
+            }
+        }
+    }
+}
+

@@ -1,0 +1,160 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+
+body.ac-shown {
+    overflow: hidden;
+}
+
+.age-check {
+    opacity: 0;
+    pointer-events: none;
+    background-color: #fff;
+    position: fixed;
+    z-index: 600;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+
+    @include mobile {
+        background-color: $marine;
+    }
+
+
+    .container, .row, .c12-xs, &__content { height: 100%; }
+
+    &__background {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+            position: absolute;
+            object-fit: contain;
+        }
+
+    }
+
+    &:not(.is-shown){
+        transition: opacity 0.5s ease-in-out;
+    }
+    &.is-shown {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__wrap {
+        z-index: 660;
+        position: relative;
+        height: 100%;
+    }
+
+    &__content {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        padding-top: 11.5vw;
+    }
+
+    &__title {
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 5rem;
+        margin-bottom: 2.8125rem;
+        color: $gold;
+
+        @include mobile {
+            font-size: 2.4rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+
+    }
+
+
+
+    &__buttons {
+        .btn {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        button:first-of-type {
+            margin-right: 1rem;
+        }
+
+
+    }
+
+    &__message {
+        margin-top: 1rem;
+        transition: all .3s ease;
+        font-family: "futura-pt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        &.msg-hidden {
+            opacity: 0;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+
+        p {
+            color: #fff;
+            font-size: 2rem;
+
+            @include mobile {
+                margin-top: 1.25rem;
+                font-size: 1.25rem;
+                text-align: center;
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+
+        &__title {
+            font-size: 3.75rem;
+            font-family: "futura-pt-condensed", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: $gold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+
+            @include mobile {
+                margin-top: 2rem;
+                margin-bottom: 0;
+                font-size: 2.4rem;
+                text-align: center;
+            }
+        }
+
+        p {
+            font-family: "futura-pt", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #fff;
+            font-size: 1.25rem;
+            line-height:  1.4;
+        }
+    }
+
+    &__footer {
+        margin-top: auto;
+        img {
+            display: block;
+            max-width: 50rem;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+
+}

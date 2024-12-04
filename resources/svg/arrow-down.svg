@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Laag 1" viewBox="0 0 43.6 22">
+  <defs>
+    <clipPath id="a">
+      <path fill="none" d="M0 0h43.6v22H0z"/>
+    </clipPath>
+  </defs>
+  <g fill="none" clip-path="url(#a)">
+    <path stroke="#123047" stroke-linecap="round" stroke-width="4" d="m2 2 19.8 17.3L41.6 2"/>
+  </g>
+</svg>

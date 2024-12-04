@@ -1,0 +1,131 @@
+title: 'Blok aanpassingen'
+fields:
+  -
+    handle: collapse_settings
+    field:
+      fields:
+        -
+          handle: settings_bg_color
+          field:
+            allow_any: true
+            type: color
+            display: Achtergrondkleur
+            icon: color
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            width: 50
+            swatches:
+              - '#8cb63c'
+              - '#ffff'
+            localizable: false
+        -
+          handle: achtergrond_gradient
+          field:
+            options:
+              'null': Geen
+            taggable: false
+            push_tags: false
+            multiple: false
+            clearable: false
+            searchable: true
+            cast_booleans: false
+            type: select
+            display: 'Achtergrond Gradient'
+            icon: select
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            default: 'null'
+            localizable: false
+        -
+          handle: settings_padding_top
+          field:
+            type: integer
+            display: 'Aangepaste padding bovenkant'
+            icon: integer
+            instructions: 'In pixels'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            localizable: false
+        -
+          handle: settings_padding_bottom
+          field:
+            type: integer
+            display: 'Aangepaste padding onderkant'
+            icon: integer
+            instructions: 'In pixels'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            localizable: false
+        -
+          handle: settings_padding_top_m
+          field:
+            type: integer
+            display: 'Padding bovenkant mobiel'
+            icon: integer
+            instructions: 'In pixels'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            localizable: false
+        -
+          handle: settings_padding_bottom_m
+          field:
+            type: integer
+            display: 'Padding onderkant mobiel'
+            icon: integer
+            instructions: 'In pixels'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            localizable: false
+        -
+          handle: custom_class
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: 'Custom class'
+            icon: text
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            localizable: false
+        -
+          handle: custom_id
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: 'Custom ID'
+            icon: text
+            localizable: false
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+      type: collapse
+      display: 'Blok aanpassingen'
+      icon: section
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      localizable: false

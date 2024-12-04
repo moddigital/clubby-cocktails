@@ -1,0 +1,19 @@
+{{#
+	@name Footer navigation
+	@desc The sites footer navigation rendered on each page.
+#}}
+<div class="navigation">
+
+        <ul id="footer-menu" class="navigation__list navigation__list--footer" >
+            {{ nav:footer  include_home="false"  }}
+                <li class="navigation__item  {{ if is_current  }} navigation__item--current {{ /if }}">
+
+                    <a class="navigation__link" href="{{ url }}">
+                        {{ title }}
+                    </a><!-- . navigation__link -->
+
+                 </li><!-- .navigation__item -->
+            {{ /nav:footer }}
+        </ul><!-- .navigation__list -->
+
+</div><!-- .navigation__container -->

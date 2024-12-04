@@ -1,0 +1,23 @@
+title: Cocktails
+sites:
+  - global
+  - dutch
+  - german
+propagate: false
+template: '@blueprint'
+layout: layout
+mount: home
+revisions: false
+route: 'cocktails/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+structure:
+  root: false
+  slugs: true

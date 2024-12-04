@@ -1,0 +1,116 @@
+company_name: 'Clubby Cocktails'
+company_adres: 'PO BOX: 14789'
+company_zip: '1001 LG AMSTERDAM'
+copyright_since: 2023
+copyright_name: 'Clubby Cocktails'
+privacy_statement_type: entry
+privacy_statement_entry: f00f5f26-4de3-4e86-a5e9-d5263e820a7c
+header_logo: logos/clubby-cocktails-logo.png
+header_logo_mh: 65
+header_logo_mh_mob: 42
+header_height: 126
+header_height_mob: 63
+header_bg_c: '#ffffff'
+header_b_c: '#cda87b'
+header_hb_c: '#233448'
+header_link_c: '#233448'
+header_link_hc: '#cda87b'
+header_bg_c_menu: '#ffffff'
+header_link_c_menu: '#233448'
+footer_logo: graphics/clubby-cocktails-footer.png
+footer_logo_mw: 800
+footer_logo_mw_mob: 300
+footer_content_left:
+  -
+    type: heading
+    attrs:
+      textAlign: center
+      level: 2
+    content:
+      -
+        type: text
+        text: CONTACT
+  -
+    type: paragraph
+    attrs:
+      textAlign: center
+      class: null
+    content:
+      -
+        type: text
+        text: 'P.O. Box 14789'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: '1001 LG Amsterdam'
+footer_content_right:
+  -
+    type: heading
+    attrs:
+      textAlign: center
+      level: 2
+    content:
+      -
+        type: text
+        text: 'STAY UP TO DATE'
+  -
+    type: paragraph
+    attrs:
+      textAlign: center
+      class: null
+    content:
+      -
+        type: text
+        text: 'We love to inform you about new flavours, venues and shops.'
+  -
+    type: set
+    attrs:
+      id: lmagz4t5
+      values:
+        type: buttons
+        buttons:
+          -
+            id: lmagz6jh
+            label: 'Sign up now'
+            link_type: alpine
+            target_blank: false
+            button_type: secondary
+            alpine_function: 'modalOpen = true'
+footer_bg_c: '#233448'
+footer_text_c: '#FFFFFF'
+footer_text_hc: '#cda87b'
+footer_fb_c: '#233448'
+footer_fb_hc: '#cda87b'
+footer_ig_c: '#233448'
+footer_ig_hc: '#cda87b'
+footer_li_c: '#233448'
+footer_li_hc: '#cda87b'
+form_hc: '#cda87b'
+form_ec: '#ff0000'
+form_sc: '#428959'
+form_logo: logos/clubby-cocktails-logo.png
+font_import: use.typekit.net/dus8igl.css
+font_family_body: '"futura-pt-condensed", sans-serif;'
+font_family_head: '''Askja'', Arial;'
+font_h1: 100
+font_h1_m: 50
+font_h2: 60
+font_h2_m: 30
+font_h3: 36
+font_h3_m: 22
+font_body: 40
+font_body_m: 20
+font_body_c: '#233448'
+font_head_c: '#cda87b'
+font_link_c: '#233448'
+font_link_hc: '#cda87b'
+font_underline_h: false
+cookie_primary_color: '#233448'
+cookie_toggle_color: '#233448'
+html_root_size: 16
+max_width: 1640
+padding: 24
+gutters_xs: 4
+gutters_sm: 8
+gutters_md: 20

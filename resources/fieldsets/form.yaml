@@ -1,0 +1,60 @@
+title: Form
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: hidden
+      display: Titel
+      instructions_position: above
+      antlers: false
+      visibility: visible
+      always_save: false
+  -
+    handle: text
+    field: common.text_plain
+    config:
+      display: Tekst
+  -
+    handle: form
+    field:
+      max_items: 1
+      type: form
+      listable: hidden
+      display: Formulier
+      validate:
+        - required
+      instructions_position: above
+  -
+    handle: voeg_code_toe_aan_onsuccess
+    field:
+      mode: toggle
+      display: 'Voeg code toe aan onSuccess'
+      type: revealer
+      icon: revealer
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: onsuccess_script
+    field:
+      theme: material
+      mode: javascript
+      mode_selectable: false
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      display: 'Code snippet'
+      type: code
+      icon: code
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        voeg_code_toe_aan_onsuccess: 'equals true'

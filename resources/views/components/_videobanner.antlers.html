@@ -1,0 +1,77 @@
+<style>
+  .block__video video {
+    width: 100%;
+  }
+</style>
+
+
+
+<div class="block__video block__banner">
+
+  <div class="splide__track">
+    <ul class="splide__list">
+
+      <li class="splide__slide">
+        <div class="splide__image">
+          <video id="video" autoplay playsinline muted>
+            <source src="{{ video }}" type="video/mp4">
+          </video>
+        </div>
+        <div class="splide__overlay">
+          <div class="splide__content">
+            {{ content }}
+
+
+          </div>
+
+          <div id="play" onclick="muteLoop()"></div>
+          <div id="mutevideo" class="mute muted" onclick="muteLoop()"></div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+
+
+</div>
+
+
+
+<script>
+
+
+  let vid = document.getElementById("video");
+  let btn = document.getElementById("mutevideo");
+  let play = document.getElementById("play");
+
+  function muteLoop() {
+
+    vid.loop = true;
+    vid.play(); 
+
+    if (vid.muted == false) {
+      vid.muted = true;
+      btn.classList.remove("unmuted");
+      btn.classList.add("muted");
+    }
+    else {
+      vid.muted = false;
+      btn.classList.remove("muted");
+      btn.classList.add("unmuted");
+    }
+
+    play.style.display = 'none';
+
+
+  }
+
+
+vid.addEventListener("ended", (event) => {
+  vid.currentTime = 0;
+  play.style.display = 'block';
+});
+
+
+
+</script>

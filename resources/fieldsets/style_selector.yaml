@@ -1,0 +1,25 @@
+title: 'Style selector'
+fields:
+  -
+    handle: style_selector
+    field:
+      options:
+        style-purple: 'Purple (Pornstar)'
+        style-orange: 'Orange (Amaretto)'
+        style-green: 'Green (Mojito)'
+        style-brown: 'Brown (Espresso)'
+        style-red: 'Red (Strawberry)'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Style selector'
+      icon: select
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

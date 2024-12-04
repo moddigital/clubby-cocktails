@@ -1,0 +1,1160 @@
+tabs:
+  general:
+    display: Algemeen
+    sections:
+      -
+        display: 'Algemene informatie'
+        fields:
+          -
+            handle: company_name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Naam
+              icon: text
+              instructions: 'Naam van het bedrijf of de organisatie'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: company_adres
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Adres
+              icon: text
+              instructions: 'Straat en nummer'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: company_zip
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Postcode en stad'
+              icon: text
+              instructions: 'Postcode en stad'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: company_phone
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Telefoonnummer
+              icon: text
+              instructions: 'Gebruikte telefoonnummer op de site'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: company_mail
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: E-mailadres
+              icon: text
+              instructions: 'Gebruikt e-mailadres op de site'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: Copyright
+        instructions: 'Copyright configuratie-opties.'
+        fields:
+          -
+            handle: copyright_since
+            field:
+              placeholder: '2020'
+              input_type: number
+              character_limit: 4
+              prepend: ©
+              antlers: false
+              default: '2020'
+              display: 'Copyright vanaf'
+              instructions: 'De website voegt ` - huidig_jaar ` toe als ze verschillen.'
+              type: text
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              validate:
+                - required
+              localizable: false
+          -
+            handle: copyright_name
+            field:
+              input_type: text
+              antlers: false
+              display: 'Copyright naam'
+              type: text
+              icon: text
+              instructions: 'Valt terug op de naam van de applicatie.'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              localizable: false
+      -
+        display: Privacyverklaring
+        instructions: 'Configureer een optionele privacyverklaring.'
+        fields:
+          -
+            handle: privacy_statement_type
+            field:
+              options:
+                none: Geen
+                entry: Entry
+                pdf: PDF
+              default: none
+              type: button_group
+              instructions: 'Dit wordt gebruikt in formulieren.'
+              instructions_position: below
+              listable: false
+              localizable: true
+              display: Privacyverklaring
+              width: 50
+          -
+            handle: privacy_statement_asset
+            field: common.image
+            config:
+              localizable: true
+              listable: hidden
+              display: 'Privacyverklaring (PDF)'
+              width: 50
+              if:
+                privacy_statement_type: 'equals pdf'
+              validate:
+                - 'required_if:privacy_statement_type,pdf'
+          -
+            handle: privacy_statement_entry
+            field: common.entry
+            config:
+              localizable: true
+              listable: hidden
+              display: 'Privacyverklaring (entry)'
+              width: 50
+              if:
+                privacy_statement_type: 'equals entry'
+              validate:
+                - 'required_if:privacy_statement_type,entry'
+  header:
+    display: Header
+    sections:
+      -
+        display: Logo
+        fields:
+          -
+            handle: header_logo
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Afbeelding
+              icon: assets
+              instructions: 'Logo in de header'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_logo_mh
+            field:
+              type: integer
+              display: Hoogte
+              icon: integer
+              instructions: 'Maximale hoogte in pixels voor grote schermen'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_logo_mh_mob
+            field:
+              type: integer
+              display: 'Hoogte mobiel'
+              icon: integer
+              instructions: 'Maximale hoogte in pixels voor mobiel'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: Layout
+        fields:
+          -
+            handle: header_height
+            field:
+              type: integer
+              display: 'Hoogte header'
+              icon: integer
+              instructions: 'Hoogte van de header in pixels'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_height_mob
+            field:
+              type: integer
+              display: 'Hoogte header mobiel'
+              icon: integer
+              instructions: 'Hoogte van de header in pixels voor mobiel'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: Kleur
+        fields:
+          -
+            handle: header_bg_c
+            field:
+              allow_any: true
+              default: '#EAEAEA'
+              type: color
+              display: Achtergrond
+              icon: color
+              instructions: 'Achtergrond kleur van de header'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_b_c
+            field:
+              allow_any: true
+              default: '#EAEAEA'
+              type: color
+              display: Border
+              icon: color
+              instructions: 'Border kleur aan de onderkant'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_hb_c
+            field:
+              allow_any: true
+              default: '#000064'
+              type: color
+              display: 'Menu knop'
+              icon: color
+              instructions: 'Kleur van de hamburger menu knop'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_link_c
+            field:
+              allow_any: true
+              default: '#000064'
+              type: color
+              display: 'Header link'
+              icon: color
+              instructions: 'Kleur van een link in de header'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_link_hc
+            field:
+              allow_any: true
+              default: '#e5007e'
+              type: color
+              display: 'Header link hover'
+              icon: color
+              instructions: 'Kleur van een actieve/hover link in de header'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_bg_c_menu
+            field:
+              allow_any: true
+              default: '#EAEAEA'
+              type: color
+              display: 'Mobiel menu'
+              icon: color
+              instructions: 'Achtergrond kleur van het mobiele menu/dropdown'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: header_link_c_menu
+            field:
+              allow_any: true
+              default: '#000064'
+              type: color
+              display: 'Mobiel menu link'
+              icon: color
+              instructions: 'Kleur van de links in het mobiele menu/dropdown'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+  footer:
+    display: Footer
+    sections:
+      -
+        display: Logo
+        fields:
+          -
+            handle: footer_logo
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Afbeelding
+              icon: assets
+              instructions: 'logo in de footer'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_logo_mw
+            field:
+              type: integer
+              display: Breedte
+              icon: integer
+              instructions: 'Maximale breedte in pixels voor grote schermen'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_logo_mw_mob
+            field:
+              type: integer
+              display: 'Breedte mobiel'
+              icon: integer
+              instructions: 'Maximale breedte in pixels voor mobiel'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: Content
+        fields:
+          -
+            handle: footer_content_left
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h4
+                - aligncenter
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Content links'
+              icon: bard
+              instructions: 'Text in het linker gedeelte van de footer'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+              word_count: false
+              sets:
+                nieuwe_set_groep:
+                  display: 'Nieuwe Set Groep'
+                  instructions: null
+                  icon: null
+                  sets:
+                    buttons:
+                      display: Buttons
+                      instructions: null
+                      icon: programming-module-box-cube
+                      fields:
+                        -
+                          import: buttons
+          -
+            handle: footer_content_right
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - aligncenter
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Content rechts'
+              icon: bard
+              instructions: 'Text in het rechter gedeelte van de footer'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+              word_count: false
+              sets:
+                buttons:
+                  display: Buttons
+                  instructions: null
+                  icon: programming-module-box-cube
+                  sets:
+                    buttons:
+                      display: Buttons
+                      instructions: null
+                      icon: programming-module-box-cube
+                      fields:
+                        -
+                          import: buttons
+                    invoke_modal:
+                      display: 'Invoke Modal'
+                      instructions: null
+                      icon: programming-script-code
+                      fields:
+                        -
+                          import: invoke_modal
+      -
+        display: Kleur
+        fields:
+          -
+            handle: footer_bg_c
+            field:
+              allow_any: true
+              default: '#EAEAEA'
+              type: color
+              display: 'Achtergrond kleur'
+              icon: color
+              instructions: 'Achtergrond kleur van de footer'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_text_c
+            field:
+              allow_any: true
+              type: color
+              display: 'Text kleur'
+              icon: color
+              instructions: 'Kleur van de tekst in de footer'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              default: '#222'
+              localizable: false
+          -
+            handle: footer_text_hc
+            field:
+              swatches:
+                - '#e5007e'
+                - '#222'
+                - '#fff'
+              allow_any: true
+              default: '#efefef'
+              type: color
+              display: 'Text hover kleur'
+              icon: color
+              instructions: 'Kleur bij het hoveren van links'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: 'Social media'
+        fields:
+          -
+            handle: footer_fb
+            field:
+              input_type: text
+              prepend: 'https://'
+              antlers: false
+              type: text
+              display: Facebook
+              icon: text
+              instructions: 'Link naar facebook'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_fb_c
+            field:
+              allow_any: true
+              default: '#000064'
+              type: color
+              display: Kleur
+              icon: color
+              instructions: 'Kleur van het icoon'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_fb_hc
+            field:
+              allow_any: true
+              default: '#e5007e'
+              type: color
+              display: Hover
+              icon: color
+              instructions: 'Hover kleur van het icoon'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_ig
+            field:
+              input_type: text
+              prepend: 'https://'
+              antlers: false
+              type: text
+              display: Instagram
+              icon: text
+              instructions: 'Link naar Instagram'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_ig_c
+            field:
+              allow_any: true
+              default: '#000064'
+              type: color
+              display: Kleur
+              icon: color
+              instructions: 'Kleur van het icoon'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_ig_hc
+            field:
+              allow_any: true
+              default: '#e5007e'
+              type: color
+              display: Hover
+              icon: color
+              instructions: 'Hover kleur van het icoon'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_li
+            field:
+              input_type: text
+              prepend: 'https://'
+              antlers: false
+              type: text
+              display: LinkedIn
+              icon: text
+              instructions: 'Link naar LinkedIn'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_li_c
+            field:
+              allow_any: true
+              default: '#000064'
+              type: color
+              display: Kleur
+              icon: color
+              instructions: 'Kleur van het icoon'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: footer_li_hc
+            field:
+              allow_any: true
+              default: '#e5007e'
+              type: color
+              display: Hover
+              icon: color
+              instructions: 'Hover kleur van het icoon'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+  formulieren:
+    display: Formulieren
+    sections:
+      -
+        display: Kleur
+        fields:
+          -
+            handle: form_hc
+            field:
+              allow_any: true
+              default: '#e5007e'
+              type: color
+              display: 'Hover/focus kleur'
+              icon: color
+              instructions: 'Hover/focus kleur op input velden'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: form_ec
+            field:
+              swatches:
+                - '#ff0000'
+              allow_any: true
+              default: '#ff0000'
+              type: color
+              display: 'Error kleur'
+              icon: color
+              instructions: 'Error kleur bij validatie'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: form_sc
+            field:
+              allow_any: true
+              default: '#428959'
+              type: color
+              display: 'Succes color'
+              icon: color
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: Logo
+        fields:
+          -
+            handle: form_logo
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Logo
+              icon: assets
+              instructions: 'Logo in de email'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+  typography:
+    display: Typografie
+    sections:
+      -
+        display: Lettertype
+        fields:
+          -
+            handle: font_import
+            field:
+              input_type: text
+              prepend: 'https://'
+              antlers: false
+              type: text
+              display: 'Font @import link'
+              icon: text
+              instructions: 'Plaatst hier de @font import link. Bijvoorbeeld: fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i&display=swap (google) of use.typekit.net/eks3ypz.css (adobe)'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_family_body
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Font-family (body)'
+              icon: text
+              instructions: 'Plaats hier de font-family voor de body tekst. Bijvoorbeeld: Raleway, sans-serif'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_family_head
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Font family (head)'
+              icon: text
+              instructions: 'Plaats hier de font-family voor de headers. Bijvoorbeeld: Raleway, sans-serif'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: 'Font size'
+        instructions: 'Alle font sizes in pixels'
+        fields:
+          -
+            handle: font_h1
+            field:
+              type: integer
+              display: 'H1 size'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_h1_m
+            field:
+              type: integer
+              display: 'H1 size (mobiel)'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_h2
+            field:
+              type: integer
+              display: 'H2 size'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_h2_m
+            field:
+              type: integer
+              display: 'H2 size (mobiel)'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_h3
+            field:
+              type: integer
+              display: 'H3 size'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_h3_m
+            field:
+              type: integer
+              display: 'H3 size (mobiel)'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_h4
+            field:
+              type: integer
+              display: 'H4 size'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_h4_m
+            field:
+              type: integer
+              display: 'H4 size (mobiel)'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_body
+            field:
+              type: integer
+              display: 'Body size'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_body_m
+            field:
+              type: integer
+              display: 'Body size (mobiel)'
+              icon: integer
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: Kleuren
+        fields:
+          -
+            handle: font_body_c
+            field:
+              allow_any: true
+              default: '#222'
+              type: color
+              display: 'Tekst kleur'
+              icon: color
+              instructions: 'Normale tekst kleur'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_head_c
+            field:
+              allow_any: true
+              default: '#222'
+              type: color
+              display: 'Kop kleur'
+              icon: color
+              instructions: 'Normale kleur koppen'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_link_c
+            field:
+              allow_any: true
+              default: '#222'
+              type: color
+              display: 'Link kleur'
+              icon: color
+              instructions: 'Normale Link kleur'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: font_link_hc
+            field:
+              allow_any: true
+              default: '#e5007e'
+              type: color
+              display: 'Hover kleur'
+              icon: color
+              instructions: 'Link hover/focus kleur'
+              width: 25
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+      -
+        display: Overig
+        fields:
+          -
+            handle: font_underline_h
+            field:
+              default: false
+              type: toggle
+              display: 'Link hover underline'
+              icon: toggle
+              instructions: 'Links onderstrepen bij hover/active'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+  colors:
+    display: Kleuren
+    sections:
+      -
+        display: Cookiebanner
+        fields:
+          -
+            handle: cookie_primary_color
+            field:
+              allow_any: true
+              default: '#222'
+              type: color
+              display: 'Primaire kleur'
+              icon: color
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: cookie_toggle_color
+            field:
+              allow_any: true
+              default: '#222'
+              type: color
+              display: 'Toggle kleur'
+              icon: color
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+  geavanceerd:
+    display: Geavanceerd
+    sections:
+      -
+        display: Instellingen
+        fields:
+          -
+            handle: html_root_size
+            field:
+              type: integer
+              display: 'HTML Root size'
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: max_width
+            field:
+              default: '1512'
+              type: integer
+              display: 'Max width'
+              icon: integer
+              instructions: 'Maximale breedte van de container in px'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 50
+              localizable: false
+          -
+            handle: padding
+            field:
+              default: '24'
+              type: integer
+              display: Padding
+              icon: integer
+              instructions: 'Padding van de container in PX'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: gutters_xs
+            field:
+              default: '16'
+              type: integer
+              display: 'Gutters XS'
+              icon: integer
+              instructions: 'Tussenruimte van de blokken op mobiel in px.'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: gutters_sm
+            field:
+              default: '16'
+              type: integer
+              display: 'Gutters SM'
+              icon: integer
+              instructions: 'Tussenruimte van de blokken op tablet in px.'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false
+          -
+            handle: gutters_md
+            field:
+              default: '32'
+              type: integer
+              display: 'Gutters MD'
+              icon: integer
+              instructions: 'Tussenruimte van de blokken op desktop in px.'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              localizable: false

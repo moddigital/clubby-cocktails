@@ -1,0 +1,153 @@
+title: 'Content (Max width)'
+fields:
+  -
+    handle: mw_article
+    field:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - h4
+        - bold
+        - italic
+        - underline
+        - unorderedlist
+        - orderedlist
+        - quote
+        - superscript
+        - subscript
+        - anchor
+        - alignleft
+        - aligncenter
+        - alignright
+        - color
+        - removeformat
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: true
+      fullscreen: true
+      allow_source: true
+      type: bard
+      localizable: true
+      listable: hidden
+      display: Content
+      replicator_preview: false
+      always_show_set_button: false
+      container: assets
+      enable_input_rules: true
+      enable_paste_rules: true
+      instructions_position: above
+      antlers: false
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            embed_maps:
+              display: 'Google Maps'
+              instructions: null
+              icon: travel-map
+              fields:
+                -
+                  import: google_maps
+            banner:
+              display: 'Banner / Slider'
+              instructions: null
+              icon: layout-carousel-horizontal
+              fields:
+                -
+                  import: banner
+            videobanner:
+              display: Videobanner
+              instructions: null
+              icon: media-webcam-video
+              fields:
+                -
+                  handle: video
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: video
+                    icon: assets
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: content
+                  field:
+                    buttons:
+                      - h1
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - color
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Content
+                    icon: bard
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+            scroll_down:
+              display: 'Scroll down'
+              instructions: null
+              icon: download-arrow-down
+              fields:
+                -
+                  import: scroll_down
+            separator:
+              display: separator
+              instructions: null
+              icon: layout-page-break
+              fields:
+                -
+                  import: seperator
+      visibility: visible
+      always_save: false
+      collapse: accordion
+      previews: true
+      remove_empty_nodes: trim
+      smart_typography: true
+      inline: false
+      hide_display: false
+      word_count: false

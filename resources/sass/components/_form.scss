@@ -1,0 +1,316 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3.25rem;
+
+    @include mobile {
+        padding-top: 0;
+    }
+
+    /*
+     * Title and description
+     */
+    &__title {
+        margin-bottom: 2rem;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3.75rem;
+
+        @include mobile {
+            font-size: 2rem;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: $gold;
+            height: 0.375rem;
+            width: 15rem;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -1rem;
+
+            @include mobile {
+                bottom: -0.5rem;
+                width: 12rem;
+                height: 0.175rem;
+            }
+        }
+    }
+    &__description {
+        margin-bottom: 1rem;
+    }
+
+    /*
+     * Status messages
+     */
+     &__error-message {
+        color: $marine;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.75rem;
+
+        @include mobile {
+            font-size: 1.25rem;
+        }
+     }
+     &__succes-message {
+        color: $marine;
+        margin-top: 3.25rem;
+        margin-bottom: 1rem;
+
+        @include mobile {
+            text-align: center;
+            font-size: 1.5rem;
+            max-width: 10rem;
+            margin: 0 auto;
+        }
+     }
+
+    /*
+     * Loading and error states
+     */
+    &--sending {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+    &__error {
+        color: $marine;
+        font-size: 1.5rem;
+        display: block;
+        margin-top: 0.25rem;
+        text-align: center;
+        text-decoration: underline;
+
+        @include mobile {
+            font-size: 1.25rem;
+        }
+    }
+
+    /*
+     * Layout
+     */
+     margin-left: -0.75rem;
+     margin-right: -0.75rem;
+     &__group,
+     &__button {
+         padding-left: 0.75rem;
+         padding-right: 0.75rem;
+         width: 100%;
+         &.w-100 { width: 100%; }
+         &.w-75 { width: 75%; }
+         &.w-66 { width: 66%; }
+         &.w-50 { width: 50%; }
+         &.w-33 { width: 33%; }
+         &.w-25 { width: 25%; }
+     }
+     &__group {
+         margin-bottom: 1.75rem;
+     }
+     &__button {
+        display: flex;
+        justify-content: center;
+     }
+
+    /*
+     * Required (*) in label
+     */
+     &__required {
+        font-size: 100%;
+        top: unset;
+        z-index: unset;
+        top: 0;
+        left: -0.2em;
+        color: $marine;
+     }
+
+    /*
+     * Input fields like text, textarea and select
+     */
+     &__controls {
+        text-align: left;
+	    position: relative;
+
+        // Inputs (text, textarea, select)
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,
+        select {
+            line-height: 1.5;
+            border: 1px solid $marine;
+            color: $marine;
+            font-family: inherit;
+            font-size: 1.75rem;
+            font-weight: 300;
+            padding: 0.325rem 0.625rem;
+            width: 100%;
+            border-radius: 2px;
+            transition: all 300ms;
+            resize: none;
+            appearance: none;
+            background-color: #fff;
+
+            &:focus, &:hover{
+                outline: none;
+                border-color: var(--form-hc);
+            }
+
+            // Hide placeholders
+            &::-webkit-input-placeholder { color:#fff; }
+            &:-moz-placeholder { color:#fff; opacity: 1; }
+            &::-moz-placeholder { color: #fff; opacity: 1; }
+            &:-ms-input-placeholder { color:#fff; }
+
+            @include mobile {
+                font-size: 1.25rem;
+            }
+
+
+        }
+        .label {
+            display: block;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.875rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+
+            @include mobile {
+                font-size: 1.25rem;
+            }
+        }
+
+    }
+
+    // Select specific
+    &__group--select {
+        select { cursor: pointer; }
+        .select__wrap {
+            position: relative;
+        }
+        .select__wrap::after {
+            pointer-events: none;
+            display: block;
+            content: "";
+            width: 0.9rem;
+            height: 0.9rem;
+            background-size: cover;
+            right: 1rem;
+            top: 1rem;
+            position: absolute;
+            opacity: 0.5;
+            background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMGw4IDEwaC0xNmw4LTEwem04IDE0aC0xNmw4IDEwIDgtMTB6Ii8+PC9zdmc+);
+        }
+    }
+
+    /*
+     * Specific styling for checkboxes, radios and toggles.
+     */
+    &__group--checkboxes,
+    &__group--toggle,
+    &__group--radio {
+
+        // Description
+        .label {
+            display: block;
+        }
+
+        // Wrapper and font
+        .form__inline {
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 300;
+            color: $marine;
+            display: grid;
+            grid-template-columns: 1em auto;
+            gap: 0.5em;
+            cursor: pointer;
+            font-size: 1.5rem;
+
+            + .form__inline {
+                margin-top: 0.5em;
+            }
+
+            @include mobile {
+                font-size: 1.25rem;
+            }
+
+            // Hover
+            &:hover input{
+                border-color: var(--form-hc);
+            }
+        }
+
+        // Hide default
+        input {
+            appearance: none;
+            background-color: #fff;
+            margin: 0;
+            font: inherit;
+            color:  #bebebe;
+            width: 1.15em;
+            height: 1.15em;
+            border: 0.15em solid  #bebebe;
+            border-radius: 0.15em;
+            display: grid;
+            place-content: center;
+
+            // For checked and unchecked radio and checkbox
+            &::before {
+                content: "";
+                width: 0.65em;
+                height: 0.65em;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1em 1em var(--form-hc);
+                // Checkmark
+                transform-origin: bottom left;
+                clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+            }
+            &:checked::before {
+                transform: scale(1);
+            }
+
+            // Focus
+            &:focus {
+                outline: max(2px, 0.15em) solid var(--form-hc);;
+                outline-offset: max(2px, 0.15em);
+            }
+        }
+
+        // No visible fieldset
+        fieldset {
+            padding: 0;
+            border: none;
+        }
+
+
+    }
+
+    /*
+     * Radio specific
+     * Only difference is the rounded/no clippath :before.
+     */
+    &__group--radio {
+        // Hide defaults
+        input[type="radio"] {
+            border-radius: 50%;
+            // For checked and unchecked
+            &::before {
+                border-radius: 50%;
+                transform-origin: unset;
+                clip-path: none;
+            }
+        }
+    }
+
+
+
+}

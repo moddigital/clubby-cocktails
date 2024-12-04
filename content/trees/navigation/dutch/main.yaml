@@ -1,0 +1,20 @@
+tree:
+  -
+    id: ae84904c-b9ed-4ee3-bbc3-ae5c00feab7c
+    entry: home
+  -
+    id: 1c7fcb7c-c503-4a4b-9db3-922740de78ad
+    entry: 3c3a830d-c8c7-41ac-b92b-c11c52b066ef
+  -
+    id: 66efc041-9cfc-4dfb-9a78-9a1addd5ac83
+    entry: 8adf5120-a480-4df8-9f44-5b065e1b4f6b
+    children:
+      -
+        id: 6a28ba60-5741-424b-ab65-b8e9be1b8c18
+        entry: facc7df3-eea0-4f98-93e3-a4733c6208d2
+      -
+        id: 147b6991-ea77-41c8-a0c1-40280d914c03
+        title: 'External link'
+        url: 'https://www.google.com/'
+        data:
+          external: true

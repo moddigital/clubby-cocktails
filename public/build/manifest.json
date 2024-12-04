@@ -1,0 +1,28 @@
+{
+  "public/fonts/Askja-Regular.woff": {
+    "file": "assets/Askja-Regular-21170d23.woff",
+    "src": "public/fonts/Askja-Regular.woff"
+  },
+  "public/fonts/Askja-Regular.woff2": {
+    "file": "assets/Askja-Regular-6ecfdbc9.woff2",
+    "src": "public/fonts/Askja-Regular.woff2"
+  },
+  "resources/sass/styles.scss": {
+    "file": "assets/styles-573e13df.css",
+    "isEntry": true,
+    "src": "resources/sass/styles.scss"
+  },
+  "resources/svg/switch-checked.svg": {
+    "file": "assets/switch-checked-c730e8aa.svg",
+    "src": "resources/svg/switch-checked.svg"
+  },
+  "resources/svg/switch-unchecked.svg": {
+    "file": "assets/switch-unchecked-96a7a086.svg",
+    "src": "resources/svg/switch-unchecked.svg"
+  },
+  "resources/ts/app.ts": {
+    "file": "assets/app-556707f6.js",
+    "isEntry": true,
+    "src": "resources/ts/app.ts"
+  }
+}

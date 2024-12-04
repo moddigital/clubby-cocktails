@@ -1,0 +1,286 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+
+// Home specific
+.page-homepage {
+    .block--two-column .inner {
+        p.big {
+            margin-top: 8.75rem;
+            @include mobile {
+                margin-top: 0;
+            }
+        }
+        h3 {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            @include mobile {
+                margin-top: 0.5rem;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .block--two-column .block__buttons {
+        margin-top: auto;
+        .btn {
+            margin-top: 1rem;
+            @include mobile {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+    // no wrap
+    .has-no-wrap p.big {
+        white-space: nowrap;
+    }
+
+    @include mobile {
+        .block__image {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+// Purple
+.style-purple {
+
+
+    p.big  {
+        color: $purple;
+    }
+    .btn--primary {
+        border-color: $purple;
+        color: $dark-purple;
+        background-image: url($purple-fill-data);
+
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            border-color: $purple;
+        }
+    }
+
+}
+.page-homepage .style-purple {
+    @include mobile {
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+// Orange
+.style-orange {
+    p.big  {
+        color: $orange;
+
+    }
+    .btn--primary {
+        border-color: $orange;
+        color: $dark-orange;
+        background-image: url($orange-fill-data);
+
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            border-color: $orange;
+        }
+    }
+}
+
+
+
+// Green
+.style-green {
+    p.big  {
+        color: $green;
+    }
+    .btn--primary {
+        border-color: $green;
+        color: $dark-green;
+        background-image: url($green-fill-data);
+
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            border-color: $green;
+        }
+    }
+
+}
+.page-homepage .style-green {
+    @include mobile {
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
+// Brown
+.style-brown {
+    p.big  {
+        color: $brown;
+    }
+    .btn--primary {
+        border-color: $brown;
+        color: $dark-brown;
+        background-image: url($brown-fill-data);
+
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            border-color: $brown;
+        }
+    }
+}
+
+
+// Red
+.style-red {
+    p.big  {
+        color: $red;
+    }
+    .btn--primary {
+        border-color: $red;
+        color: $red;
+        background-image: url($red-fill-data);
+
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            border-color: $red;
+        }
+    }
+
+
+}
+.page-homepage .style-red {
+    @include mobile {
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
+// Cocktail specifics
+.page-cocktail {
+    .block--full-width {
+        padding-bottom: 0 !important;
+    }
+
+    @include mobile {
+        .block--two-column .row > div:first-of-type {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .block__text {
+        h3 {
+            font-size: 2.125rem;
+            margin-bottom: 2rem;
+
+            @include mobile {
+                font-size: 1.75rem;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+
+
+        ul {
+            margin: 0;
+            list-style: none;
+
+
+
+            li {
+                position: relative;
+                margin-bottom: 1rem;
+
+                @include mobile {
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    padding-left: 1.1rem;
+                    font-size: 2.5rem;
+                    line-height: 1.125;
+
+                    @include mobile {
+                        padding-left: 0rem;
+                        font-size: 1.5rem;
+                    }
+                }
+                &::before {
+                    content: "\2022";
+                    color: $gold;
+                    position: absolute;
+                    left: -2.5rem;
+                    top: 0rem;
+                }
+            }
+        }
+    }
+    // Purple
+    .style-purple {
+        .block__text {
+            h3 {
+                color: $purple;
+            }
+        }
+    }
+
+    // Orange
+    .style-orange {
+        .block__text {
+            h3 {
+                color: $orange;
+            }
+        }
+    }
+
+    // Green
+    .style-green {
+        .block__text {
+            h3 {
+                color: $green;
+            }
+        }
+    }
+
+    // Brown
+    .style-brown {
+        .block__text {
+            h3 {
+                color: $brown;
+            }
+        }
+    }
+
+    // red
+    .style-red {
+        .block__text {
+            h3 {
+                color: $red;
+            }
+        }
+    }
+
+
+
+
+}
+
+
+// Custom classes
+@include mobile {
+    .mob-hide-second {
+        .row > div:nth-of-type(2){
+            display: none;
+        }
+    }
+}
+

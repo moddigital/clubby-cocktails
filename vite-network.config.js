@@ -20,7 +20,7 @@ export default defineConfig(({ command, mode }) => {
             }),
             VitePluginBrowserSync({
                 bs: {
-                  proxy: env.APP_URL,
+                  proxy: 'https://clubbycocktails.com',
                   notify: false,
                   ws: true,
                 }

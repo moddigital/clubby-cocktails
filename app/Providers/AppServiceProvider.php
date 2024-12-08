@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\URL;
 use Statamic\Statamic;
 use Statamic\Facades\GlobalSet;
 use Statamic\Fieldtypes\Section;
@@ -30,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // Statamic::script('app', 'cp');
         // Statamic::style('app', 'cp');
-
+        URL::forceScheme('https');
         Section::makeSelectableInForms();
     }
 }

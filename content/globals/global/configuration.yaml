@@ -1,6 +1,6 @@
 company_name: 'Clubby Cocktails'
-company_adres: 'PO BOX: 14789'
-company_zip: '1001 LG AMSTERDAM'
+company_adres: '2 Broom Gardens, Newton Mearns'
+company_zip: 'G77 5WW Glasgow'
 copyright_since: 2023
 copyright_name: 'Clubby Cocktails'
 privacy_statement_type: entry
@@ -38,12 +38,12 @@ footer_content_left:
     content:
       -
         type: text
-        text: 'P.O. Box 14789'
+        text: '2 Broom Gardens, Newton Mearns'
       -
         type: hardBreak
       -
         type: text
-        text: '1001 LG Amsterdam'
+        text: 'G77 5WW Glasgow'
 footer_content_right:
   -
     type: heading
